@@ -1,0 +1,14 @@
+  <h1 class="text-center">New Game</h1>
+  <p class="text-center" id="letters"><%= @letters %></p>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <form class="simple-form-control" action="/score" method="post">
+        <input type="text" name="attempt" placeholder="">
+        <input type="submit" value="Check!">
+        <input id="letter_list" name="letter_list" value="<%= @letters %>" type="hidden" />
+<!--         <input id="score" name="score" value="<%= @score %>" type="hidden" /> -->
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      </form>
+    </div>
+  </div>
+
